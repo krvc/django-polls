@@ -1,0 +1,5 @@
+<ul>
+{% for question in questions %}
+    <li>{{ question.question }} - <a href="/polls/question.id/delete">delete</a></li>
+{% endfor %}
+</ul>
