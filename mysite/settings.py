@@ -1,6 +1,10 @@
 # Django settings for mysite project.
+import os
 
-DEBUG = True
+# Full filesystem path to the project.
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -123,8 +127,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'polls',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -158,4 +160,7 @@ LOGGING = {
     }
 }
 
-from local_settings import *
+try:
+    from local_settings import *
+except ImportError:
+    pass
