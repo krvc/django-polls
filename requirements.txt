@@ -1,8 +1,7 @@
 Django==1.5.1
 argparse==1.2.1
 dj-database-url==0.2.1
-django-allauth==0.12.0-dev
--e git://github.com/pythonforfacebook/facebook-sdk.git@38bbfa5d3c2d3af634c0d9a69638ab6a0ebc313e#egg=facebook_sdk-dev
+django-allauth
 gunicorn==0.17.4
 ipython==0.13.2
 oauthlib==0.4.2
