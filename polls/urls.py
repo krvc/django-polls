@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
 
 from polls import views
 
@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^(?P<poll_id>\d+)/vote/$', views.vote, name='vote'),
     url(r'^(?P<poll_id>\d+)/delete/$', views.delete, name='delete'),
     url(r'^user_page/$', views.user_page, name='user_page'),
+    (r'^accounts/', include('allauth.urls')),
 )
